@@ -21,3 +21,12 @@ WHERE NOT EXISTS
        WHERE d.PreguntaID = q.PreguntaID);
 
 
+
+
+SELECT e.Titulo, q.Numero, q.Texto, d.VectorTema
+FROM dbo.PreguntaVectoresDemo AS d
+JOIN dbo.Pregunta AS q ON q.PreguntaID = d.PreguntaID
+JOIN dbo.Encuesta AS e ON e.EncuestaID = q.EncuestaID
+ORDER BY e.EncuestaID;
+GO
+

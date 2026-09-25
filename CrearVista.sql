@@ -1,8 +1,7 @@
 USE PulsoLAB;
 GO
 
-CREATE VIEW dbo.VerPreguntasYRespuestas
-AS
+
 SELECT enc.Titulo, CONCAT(e.Nombre, N' ', e.ApellidoPaterno) AS Persona,
        q.Numero, q.Texto, o.Etiqueta AS Respuesta
 FROM dbo.Encuesta AS enc
